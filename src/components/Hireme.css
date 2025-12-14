@@ -1,0 +1,422 @@
+.hireme-container {
+    padding: 100px 80px;
+    min-height: 100vh;
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hireme-container.dark {
+    background-color: #252525;
+    color: #fdfdfd;
+}
+
+.hireme-container.light {
+    background-color: #f5f5f5;
+    color: #1a1a1a;
+}
+
+.hireme-content-wrapper {
+    display: flex;
+    position: relative;
+    gap: 60px;
+}
+
+.hireme-left-section {
+    width: 25%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hireme-right-section {
+    width: 75%;
+    flex: 1;
+}
+
+/* Circular Graphic */
+.circular-graphic {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outer-circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hireme-container.light .outer-circle {
+    border-color: #1a1a1a;
+}
+
+.inner-circle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background-color: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.hireme-container.light .inner-circle {
+    border-color: #1a1a1a;
+}
+
+.hire-me-svg {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.hire-text-top,
+.hire-text-bottom {
+    font-size: 12px;
+    font-weight: 600;
+    fill: #ffffff;
+    letter-spacing: 4px;
+    font-family: sans-serif;
+}
+
+.hireme-container.light .hire-text-top,
+.hireme-container.light .hire-text-bottom {
+    fill: #1a1a1a;
+}
+
+.arrow-diagonal {
+    position: absolute;
+    font-size: 1.5rem;
+    color: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    z-index: 4;
+    line-height: 1;
+}
+
+.hireme-container.light .arrow-diagonal {
+    color: #1a1a1a;
+}
+
+/* Experiences Sidebar */
+.experiences-sidebar {
+    position: absolute;
+    left: 0;
+    top: 200px;
+    bottom: 0;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 15px;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.experiences-text {
+    background: linear-gradient(to bottom, #666666 0%, #888888 30%, #aaaaaa 60%, #ffffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
+    transform: rotate(180deg);
+}
+
+.hireme-container.light .experiences-text {
+    background: linear-gradient(to bottom, #333333 0%, #555555 30%, #777777 60%, #000000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Right Section */
+.hireme-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+    color: #ffffff;
+}
+
+.hireme-container.light .hireme-title {
+    color: #1a1a1a;
+}
+
+.hireme-intro {
+    margin-bottom: 50px;
+}
+
+.hireme-intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.hireme-container.light .hireme-intro p {
+    color: #1a1a1a;
+}
+
+.learn-more-btn {
+    padding: 12px 30px;
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hireme-container.light .learn-more-btn {
+    color: #1a1a1a;
+    border-color: #1a1a1a;
+}
+
+.learn-more-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hireme-container.light .learn-more-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Accordion */
+.experience-accordion {
+    max-width: 100%;
+}
+
+.accordion-item {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #4a4a4a;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.hireme-container.light .accordion-item {
+    border-color: #d0d0d0;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.hireme-container.light .accordion-header:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.accordion-header h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+    color: #ffffff;
+}
+
+.hireme-container.light .accordion-header h3 {
+    color: #1a1a1a;
+}
+
+.accordion-arrow {
+    font-size: 1.2rem;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.hireme-container.light .accordion-arrow {
+    color: #1a1a1a;
+}
+
+.accordion-content {
+    padding: 0 25px 20px 25px;
+    animation: slideDown 0.3s ease;
+}
+
+.accordion-divider {
+    height: 1px;
+    background-color: #4a4a4a;
+    margin: 15px 0 20px 0;
+}
+
+.hireme-container.light .accordion-divider {
+    background-color: #d0d0d0;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.accordion-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.accordion-content li {
+    padding: 8px 0;
+    color: #b0b0b0;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.hireme-container.light .accordion-content li {
+    color: #666;
+}
+
+@media (max-width: 1200px) {
+    .hireme-container {
+        flex-direction: column;
+    }
+    
+    .hireme-left-section {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .hireme-right-section {
+        width: 100%;
+        padding-left: 0;
+    }
+    
+    .experiences-sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hireme-container {
+        padding: 80px 40px;
+    }
+    
+    .hireme-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hireme-container {
+        padding: 80px 20px;
+    }
+    
+    .circular-graphic {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .outer-circle {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .inner-circle {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .hire-me-svg {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .hireme-title {
+        font-size: 2rem;
+    }
+    
+    .hireme-intro p {
+        font-size: 1rem;
+    }
+    
+    .accordion-header {
+        padding: 15px 20px;
+    }
+    
+    .accordion-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .accordion-content {
+        padding: 0 20px 15px 20px;
+    }
+    
+    .accordion-content li {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hireme-container {
+        padding: 60px 15px;
+    }
+    
+    .circular-graphic {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .outer-circle {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .inner-circle {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .hire-me-svg {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .hireme-title {
+        font-size: 1.5rem;
+    }
+    
+    .hireme-intro p {
+        font-size: 0.9rem;
+    }
+    
+    .accordion-header {
+        padding: 12px 15px;
+    }
+    
+    .accordion-header h3 {
+        font-size: 1rem;
+    }
+}
