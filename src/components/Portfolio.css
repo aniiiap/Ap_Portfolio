@@ -14,7 +14,7 @@
 }
 
 .portfolio-container.light .portfolio-code-section {
-    background-color: #f5f5f5;
+    background-color: #fafafa;
 }
 
 .portfolio-projects-section {
@@ -28,8 +28,8 @@
 }
 
 .portfolio-container.light .portfolio-projects-section {
-    background-color: #f5f5f5;
-    color: #1a1a1a;
+    background-color: #fafafa;
+    color: #0a0a0a;
 }
 
 
@@ -44,8 +44,9 @@
 }
 
 .portfolio-container .code-window.light {
-    background-color: #e8e8e8;
+    background-color: #ffffff;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d0d0d0;
 }
 
 .portfolio-container .window-controls {
@@ -89,7 +90,8 @@
 }
 
 .portfolio-container .code-window.light .code-keyword {
-    color: #ce9178;
+    color: #7c3aed;
+    font-weight: 600;
 }
 
 .portfolio-container .code-function {
@@ -97,7 +99,8 @@
 }
 
 .portfolio-container .code-window.light .code-function {
-    color: #0066cc;
+    color: #0ea5e9;
+    font-weight: 600;
 }
 
 .portfolio-container .code-variable {
@@ -105,7 +108,8 @@
 }
 
 .portfolio-container .code-window.light .code-variable {
-    color: #0066cc;
+    color: #f97316;
+    font-weight: 500;
 }
 
 .portfolio-container .code-punctuation {
@@ -113,7 +117,8 @@
 }
 
 .portfolio-container .code-window.light .code-punctuation {
-    color: #1a1a1a;
+    color: #0a0a0a;
+    font-weight: 500;
 }
 
 .portfolio-container .code-indent {
@@ -172,7 +177,8 @@
 
 .project-card.light {
     background-color: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
 }
 
 .project-card:hover {
@@ -181,7 +187,9 @@
 }
 
 .project-card.light:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-color: #d0d0d0;
 }
 
 .project-image {
@@ -226,7 +234,8 @@
 }
 
 .project-card.light .project-description {
-    color: #666;
+    color: #333;
+    font-weight: 500;
 }
 
 .project-technologies {
@@ -246,8 +255,9 @@
 }
 
 .project-card.light .tech-tag {
-    background-color: #e8e8e8;
+    background-color: #f0f0f0;
     color: #1a1a1a;
+    border: 1px solid #e0e0e0;
 }
 
 .project-links {
@@ -276,7 +286,8 @@
 }
 
 .project-card.light .project-link {
-    color: #666;
+    color: #444;
+    font-weight: 500;
 }
 
 .link-icon {

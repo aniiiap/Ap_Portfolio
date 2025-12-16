@@ -10,6 +10,7 @@ import Languages from './components/Languages';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Hireme from './components/Hireme';
+import Footer from './components/Footer';
 import { useTheme } from './context/ThemeContext';
 
 function App() {
@@ -26,13 +27,14 @@ function App() {
             <Header onBulbClick={toggleTheme} />
             <MainSection />
             <About />
+            <Skills />
+            <Experience />
             <Portfolio />
             <Contact />
             <Hireme />
             <Education />
             <Languages />
-            <Skills />
-            <Experience />
+            <Footer />
         </div>
     );
 }

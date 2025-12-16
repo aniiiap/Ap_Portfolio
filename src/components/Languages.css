@@ -10,8 +10,8 @@
 }
 
 .languages-section.light {
-    background-color: #f5f5f5;
-    color: #1a1a1a;
+    background-color: #fafafa;
+    color: #0a0a0a;
 }
 
 .section-header {
@@ -53,6 +53,11 @@
     margin-bottom: 10px;
 }
 
+.languages-section.light .language-name {
+    color: #0a0a0a;
+    font-weight: 700;
+}
+
 .language-proficiency {
     font-size: 1rem;
     color: #888;
@@ -60,7 +65,8 @@
 }
 
 .languages-section.light .language-proficiency {
-    color: #666;
+    color: #6366f1;
+    font-weight: 500;
 }
 
 .progress-bar {
@@ -86,7 +92,7 @@
 }
 
 .languages-section.light .progress-fill {
-    background-color: #FFEA9F;
+    background-color: #0ea5e9;
 }
 
 @media (max-width: 1024px) {

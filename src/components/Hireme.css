@@ -1,5 +1,5 @@
 .hireme-container {
-    padding: 100px 80px;
+    padding: 100px 80px 270px 80px; /* extra bottom padding so sidebar stays inside section */
     min-height: 100vh;
     position: relative;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -11,7 +11,7 @@
 }
 
 .hireme-container.light {
-    background-color: #f5f5f5;
+    background-color: #fafafa;
     color: #1a1a1a;
 }
 
@@ -23,7 +23,6 @@
 
 .hireme-left-section {
     width: 25%;
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

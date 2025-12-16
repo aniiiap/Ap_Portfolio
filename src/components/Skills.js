@@ -84,13 +84,6 @@ const Skills = () => {
             <span className="skill-item non-clickable">GitHub</span>
           </div>
         </div>
-        <div className="skills-category">
-          <h3>Package Managers</h3>
-          <div className="skills-items">
-            <span className="skill-item non-clickable">NPM</span>
-            <span className="skill-item non-clickable">pip</span>
-          </div>
-        </div>
       </div>
     </div>
   );

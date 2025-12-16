@@ -11,6 +11,7 @@ function MainSection() {
     const [currentLetter, setCurrentLetter] = useState('');
     const [isTyping, setIsTyping] = useState(true);
     const [showCursor, setShowCursor] = useState(true);
+    const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
     const currentRole = roles[currentRoleIndex];
     const fullText = currentRole.substring(1); // Everything after first letter
@@ -62,7 +63,13 @@ function MainSection() {
                 </p>
                 <div className="buttons">
                     <button className="hire-me-btn">Hire Me</button>
-                    <button className="connect-btn">Connect</button>
+                    <button
+                        type="button"
+                        className="connect-btn"
+                        onClick={() => setIsContactModalOpen(true)}
+                    >
+                        Connect
+                    </button>
                 </div>
             </div>
 
@@ -73,6 +80,36 @@ function MainSection() {
                     alt="Anisha Patni"
                 />
             </div>
+
+            {isContactModalOpen && (
+                <div className="contact-modal-overlay" onClick={() => setIsContactModalOpen(false)}>
+                    <div
+                        className="contact-modal"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                            className="contact-modal-close"
+                            onClick={() => setIsContactModalOpen(false)}
+                            aria-label="Close contact modal"
+                        >
+                            ×
+                        </button>
+                        <h3 className="contact-modal-title">Let&apos;s Connect</h3>
+                        <p className="contact-modal-text">
+                            Feel free to reach out to me anytime. I&apos;ll get back to you as soon as possible.
+                        </p>
+                        <div className="contact-modal-email-block">
+                            <span className="contact-modal-label">Email:</span>
+                            <a
+                                href="mailto:anishapatni912@gmail.com"
+                                className="contact-modal-email"
+                            >
+                                anishapatni912@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            )}
         </main>
     );
 }

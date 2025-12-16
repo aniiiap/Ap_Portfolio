@@ -33,8 +33,8 @@
 }
 
 .about-container.light {
-    background-color: #f5f5f5;
-    color: #1a1a1a;
+    background-color: #fafafa;
+    color: #0a0a0a;
 }
 
 .about-title {
@@ -44,6 +44,11 @@
     margin-bottom: 50px;
     font-weight: 400;
     flex-shrink: 0;
+}
+
+.about-container.light .about-title {
+    color: #e55a42;
+    font-weight: 500;
 }
 
 .about-content {
@@ -65,8 +70,9 @@
 }
 
 .code-window.light {
-    background-color: #e8e8e8;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e0e0;
 }
 
 .window-controls {
@@ -101,7 +107,8 @@
 }
 
 .code-window.light .code-text {
-    color: #0066cc;
+    color: #0ea5e9;
+    font-weight: 500;
 }
 
 .greeting-text {
