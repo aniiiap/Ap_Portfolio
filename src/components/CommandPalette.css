@@ -1,0 +1,229 @@
+.command-palette-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9998;
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.command-palette {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    background-color: #2e2e2e;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    animation: slideDown 0.3s ease-out;
+    overflow: hidden;
+}
+
+.command-palette.light {
+    background-color: #ffffff;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e0e0e0;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.command-palette-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 12px;
+}
+
+.command-palette.light .command-palette-header {
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.command-palette-icon {
+    font-size: 1.2rem;
+    color: #999;
+    font-family: 'Fira Code', monospace;
+}
+
+.command-palette-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: 'Fira Code', monospace;
+    padding: 8px 0;
+}
+
+.command-palette.light .command-palette-input {
+    color: #0a0a0a;
+}
+
+.command-palette-input::placeholder {
+    color: #666;
+}
+
+.command-palette.light .command-palette-input::placeholder {
+    color: #999;
+}
+
+.command-palette-list {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 8px 0;
+}
+
+.command-palette-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    gap: 12px;
+}
+
+.command-palette-item:hover,
+.command-palette-item.selected {
+    background-color: rgba(14, 165, 233, 0.2);
+}
+
+.command-palette.light .command-palette-item:hover,
+.command-palette.light .command-palette-item.selected {
+    background-color: rgba(14, 165, 233, 0.1);
+}
+
+.command-icon {
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
+
+.command-label {
+    flex: 1;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+}
+
+.command-palette.light .command-label {
+    color: #0a0a0a;
+}
+
+.command-shortcut {
+    color: #666;
+    font-size: 0.75rem;
+    font-family: 'Fira Code', monospace;
+    padding: 4px 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.command-palette.light .command-shortcut {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #666;
+}
+
+.command-palette-empty {
+    padding: 40px 20px;
+    text-align: center;
+    color: #999;
+    font-family: 'Poppins', sans-serif;
+}
+
+.command-palette-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 20px;
+}
+
+.command-palette.light .command-palette-footer {
+    border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+.command-hint {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    color: #999;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hint-key {
+    padding: 2px 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.7rem;
+    color: #ccc;
+}
+
+.command-palette.light .hint-key {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #666;
+}
+
+/* Scrollbar styling */
+.command-palette-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.command-palette-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.command-palette-list::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.command-palette.light .command-palette-list::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.command-palette-list::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.command-palette.light .command-palette-list::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .command-palette {
+        width: 95%;
+        max-width: none;
+    }
+
+    .command-palette-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+

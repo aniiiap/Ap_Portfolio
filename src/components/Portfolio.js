@@ -1,13 +1,17 @@
 import React, { useMemo } from "react";
 import './Portfolio.css';
+import '../styles/animations.css';
 import { useTheme } from '../context/ThemeContext';
 import { useFilter } from '../context/FilterContext';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import projectImage1 from '../projects/ccdb911aae3789ac3d3d32b5f26d50a2ba43d893.png';
 import projectImage2 from '../projects/image.png';
 
 function Portfolio() {
     const { isDarkMode } = useTheme();
     const { selectedSkill } = useFilter();
+    const [codeRef, codeVisible] = useScrollAnimation();
+    const [projectsRef, projectsVisible] = useScrollAnimation();
 
     const allProjects = [
         {
@@ -66,8 +70,11 @@ function Portfolio() {
 
     return (
         <div id="portfolio" className={`portfolio-container ${isDarkMode ? 'dark' : 'light'}`}>
-            <div className="portfolio-code-section">
-                <div className={`code-window ${isDarkMode ? 'dark' : 'light'}`}>
+            <div 
+                ref={codeRef}
+                className={`portfolio-code-section fade-in-up ${codeVisible ? 'visible' : ''}`}
+            >
+                <div className={`code-window code-window-hover ${isDarkMode ? 'dark' : 'light'}`}>
                     <div className="window-controls">
                         <div className="circle red"></div>
                         <div className="circle yellow"></div>
@@ -91,11 +98,17 @@ function Portfolio() {
                     </div>
                 </div>
             </div>
-            <div className="portfolio-projects-section">
+            <div 
+                ref={projectsRef}
+                className={`portfolio-projects-section fade-in-up ${projectsVisible ? 'visible' : ''}`}
+            >
                 <h2 className="portfolio-subtitle">projects()</h2>
                 <div className="projects-grid">
                 {projects.length > 0 ? projects.map((project) => (
-                    <div key={project.id} className={`project-card ${isDarkMode ? 'dark' : 'light'}`}>
+                    <div 
+                        key={project.id} 
+                        className={`project-card hover-lift ${isDarkMode ? 'dark' : 'light'}`}
+                    >
                         <div className="project-image">
                             {project.image ? (
                                 <img src={project.image} alt={project.title} className="project-img" />

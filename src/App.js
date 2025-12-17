@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import Header from './components/Header';
+import ScrollProgress from './components/ScrollProgress';
+import CommandPalette from './components/CommandPalette';
+import BackToTop from './components/BackToTop';
 import MainSection from './components/MainSection';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
@@ -24,6 +27,9 @@ function App() {
 
     return (
         <div className="App">
+            <ScrollProgress />
+            <CommandPalette />
+            <BackToTop />
             <Header onBulbClick={toggleTheme} />
             <MainSection />
             <About />

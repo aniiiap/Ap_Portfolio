@@ -1,11 +1,14 @@
 import React from 'react';
 import './Skills.css';
+import '../styles/animations.css';
 import { useTheme } from '../context/ThemeContext';
 import { useFilter } from '../context/FilterContext';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Skills = () => {
   const { isDarkMode } = useTheme();
   const { selectedSkill, setSelectedSkill } = useFilter();
+  const [sectionRef, sectionVisible] = useScrollAnimation();
 
   const handleSkillClick = (skill) => {
     if (selectedSkill === skill) {
@@ -24,12 +27,16 @@ const Skills = () => {
   };
 
   return (
-    <div id="skills" className={`skills-section ${isDarkMode ? 'dark' : 'light'}`}>
+    <div 
+      id="skills" 
+      ref={sectionRef}
+      className={`skills-section fade-in-up ${sectionVisible ? 'visible' : ''} ${isDarkMode ? 'dark' : 'light'}`}
+    >
       <div className="section-header">
         <span className="section-icon">#</span>
         <h2>Skills</h2>
       </div>
-      <div className="skills-container">
+      <div className={`skills-container stagger-children ${sectionVisible ? 'visible' : ''}`}>
         <div className="skills-category">
           <h3>Web Development</h3>
           <div className="skills-items">

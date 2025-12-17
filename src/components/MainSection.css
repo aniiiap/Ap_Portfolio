@@ -173,6 +173,7 @@
     margin-top: 30px;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .hire-me-btn, .connect-btn {
@@ -215,6 +216,41 @@
 .main-section.light .connect-btn:hover {
     background-color: #62ba39;
     color: #1a1a1a;
+}
+
+.download-resume-btn {
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #0ea5e9;
+    background-color: transparent;
+    color: #0ea5e9;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.download-resume-btn:hover {
+    background-color: #0ea5e9;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4);
+}
+
+.main-section.light .download-resume-btn {
+    border-color: #0ea5e9;
+    color: #0ea5e9;
+}
+
+.main-section.light .download-resume-btn:hover {
+    background-color: #0ea5e9;
+    color: #ffffff;
 }
 
 /* Contact Modal */

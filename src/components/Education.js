@@ -1,12 +1,19 @@
 import React from "react";
 import './Education.css';
+import '../styles/animations.css';
 import { useTheme } from '../context/ThemeContext';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Education = () => {
     const { isDarkMode } = useTheme();
+    const [sectionRef, sectionVisible] = useScrollAnimation();
 
     return (
-        <div id="education" className={`education-section ${isDarkMode ? 'dark' : 'light'}`}>
+        <div 
+            id="education" 
+            ref={sectionRef}
+            className={`education-section fade-in-up ${sectionVisible ? 'visible' : ''} ${isDarkMode ? 'dark' : 'light'}`}
+        >
             <div className="section-header">
                 <span className="section-icon">🎓</span>
                 <h2>Education</h2>

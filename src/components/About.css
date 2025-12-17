@@ -25,6 +25,12 @@
     width: 300px;
     height: auto;
     object-fit: contain;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.avatar-container:hover .avatar-img {
+    transform: scale(1.05);
 }
 
 .about-container.dark {
@@ -67,6 +73,12 @@
     width: 100%;
     transition: background-color 0.3s ease;
     margin-top: 100px;
+}
+
+.github-stats-wrapper {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 0;
 }
 
 .code-window.light {

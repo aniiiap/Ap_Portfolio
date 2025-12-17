@@ -1,21 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import "./About.css";
+import '../styles/animations.css';
 import { useTheme } from '../context/ThemeContext';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import avatar from '../avatar/e41b08e9-c9dd-4474-95c6-f873b820a2fc-removebg-preview.png';
+import avatarHover from '../avatar/1927a395-80b8-4b87-be56-4bdbf4abf197-removebg-preview.png';
 
 function About() {
     const { isDarkMode } = useTheme();
+    const [leftRef, leftVisible] = useScrollAnimation();
+    const [rightRef, rightVisible] = useScrollAnimation();
+    const [isHovered, setIsHovered] = useState(false);
 
     return (
         <div id="about" className={`about-container ${isDarkMode ? 'dark' : 'light'}`}>
-            <div className="about-left-section">
+            <div 
+                ref={leftRef}
+                className={`about-left-section fade-in-up ${leftVisible ? 'visible' : ''}`}
+            >
                 <h1 className="about-title">aboutMe ()</h1>
-                <div className="avatar-container">
-                    <img src={avatar} alt="Anisha Patni" className="avatar-img" />
+                <div 
+                    className="avatar-container"
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                >
+                    <img 
+                        src={isHovered ? avatarHover : avatar} 
+                        alt="Anisha Patni" 
+                        className="avatar-img" 
+                    />
                 </div>
             </div>
-            <div className="about-content">
-                <div className={`code-window ${isDarkMode ? 'dark' : 'light'}`}>
+            <div 
+                ref={rightRef}
+                className={`about-content slide-in-right ${rightVisible ? 'visible' : ''}`}
+            >
+                <div className={`code-window code-window-hover ${isDarkMode ? 'dark' : 'light'}`}>
                     <div className="window-controls">
                         <div className="circle red"></div>
                         <div className="circle yellow"></div>

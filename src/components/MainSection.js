@@ -62,7 +62,17 @@ function MainSection() {
                     <span className="code-keyword">const</span> <span className="code-variable">githubLink</span> <span className="code-operator">=</span> <a className="git-link" href="https://github.com/aniiiap" target="_blank" rel="noopener noreferrer">"https://github.com/aniiiap"</a>
                 </p>
                 <div className="buttons">
-                    <button className="hire-me-btn">Hire Me</button>
+                    <button 
+                        className="hire-me-btn"
+                        onClick={() => {
+                            const contactSection = document.getElementById('contact');
+                            if (contactSection) {
+                                contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        }}
+                    >
+                        Hire Me
+                    </button>
                     <button
                         type="button"
                         className="connect-btn"
@@ -70,6 +80,15 @@ function MainSection() {
                     >
                         Connect
                     </button>
+                    {/* Download Resume button
+                    <a
+                        href="/resume.pdf"
+                        download="Anisha_Patni_Resume.pdf"
+                        className="download-resume-btn"
+                    >
+                        Download Resume
+                    </a>
+                    */}
                 </div>
             </div>
 

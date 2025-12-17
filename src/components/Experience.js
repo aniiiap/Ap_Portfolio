@@ -1,12 +1,19 @@
 import React from 'react';
 import './Experience.css';
+import '../styles/animations.css';
 import { useTheme } from '../context/ThemeContext';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Experience = () => {
   const { isDarkMode } = useTheme();
+  const [sectionRef, sectionVisible] = useScrollAnimation();
 
   return (
-    <div className={`experience-section ${isDarkMode ? 'dark' : 'light'}`}>
+    <div 
+      id="experience"
+      ref={sectionRef}
+      className={`experience-section fade-in-up ${sectionVisible ? 'visible' : ''} ${isDarkMode ? 'dark' : 'light'}`}
+    >
       <div className="experience-content-wrapper">
         <div className="experience-right-section">
           <div className="section-header">

@@ -1,13 +1,19 @@
 import React from "react";
 import './Languages.css';
+import '../styles/animations.css';
 import { useTheme } from '../context/ThemeContext';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import languageIcon from '../images/language 1.png';
 
 const Languages = () => {
     const { isDarkMode } = useTheme();
+    const [sectionRef, sectionVisible] = useScrollAnimation();
 
     return (
-        <div className={`languages-section ${isDarkMode ? 'dark' : 'light'}`}>
+        <div 
+            ref={sectionRef}
+            className={`languages-section fade-in-up ${sectionVisible ? 'visible' : ''} ${isDarkMode ? 'dark' : 'light'}`}
+        >
             <div className="section-header">
                 <img src={languageIcon} alt="Languages" className="section-icon" />
                 <h2>Languages</h2>
