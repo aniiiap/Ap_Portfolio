@@ -6,6 +6,7 @@ import { useFilter } from '../context/FilterContext';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import projectImage1 from '../projects/ccdb911aae3789ac3d3d32b5f26d50a2ba43d893.png';
 import projectImage2 from '../projects/image.png';
+import projectImage3 from '../projects/Screenshot 2025-12-17 224450.png';
 
 function Portfolio() {
     const { isDarkMode } = useTheme();
@@ -31,6 +32,15 @@ function Portfolio() {
             liveDemo: "https://staffdox.co.in/",
             codeLink: "https://github.com/aniiiap/Staffdox_webapp",
             image: projectImage2
+        },
+        {
+            id: 3,
+            title: "M A K V & Associates",
+            description: "A modern, responsive full-stack website for M A K V & Associates built with MERN stack. Features include service management system, contact form with backend integration, smooth animations with Framer Motion, and a fully responsive design optimized for performance.",
+            technologies: ["React", "Node.js", "MongoDB", "Express.js", "Tailwind CSS"],
+            liveDemo: "https://www.makv.in/",
+            codeLink: "https://github.com/aniiiap/Makv_web",
+            image: projectImage3
         }
     ];
 
