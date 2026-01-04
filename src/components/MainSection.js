@@ -43,6 +43,15 @@ function MainSection() {
         setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
     };
 
+    const handleConnectClick = () => {
+        // Check if mobile (screen width <= 768px)
+        if (window.innerWidth <= 768) {
+            window.location.href = 'mailto:anishapatni912@gmail.com';
+        } else {
+            setIsContactModalOpen(true);
+        }
+    };
+
     return (
         <main id="main-section" className={`main-section ${isDarkMode ? 'dark' : 'light'}`}>
             <div className="intro">
@@ -76,7 +85,7 @@ function MainSection() {
                     <button
                         type="button"
                         className="connect-btn"
-                        onClick={() => setIsContactModalOpen(true)}
+                        onClick={handleConnectClick}
                     >
                         Connect
                     </button>

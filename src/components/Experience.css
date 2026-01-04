@@ -11,8 +11,8 @@
 }
 
 .experience-section.light {
-    background-color: #fafafa;
-    color: #0a0a0a;
+    background-color: #ffffff;
+    color: #1f2937;
 }
 
 .experience-content-wrapper {
@@ -60,7 +60,7 @@
 }
 
 .experience-section.light .timeline::before {
-    background-color: #0ea5e9;
+    background-color: #6366f1;
 }
 
 .timeline-item {
@@ -84,8 +84,8 @@
 }
 
 .experience-section.light .timeline-item::before {
-    background-color: #0ea5e9;
-    border-color: #fafafa;
+    background-color: #6366f1;
+    border-color: #ffffff;
     border-width: 2px;
 }
 
@@ -114,7 +114,7 @@
 }
 
 .experience-section.light .timeline-title {
-    color: #f97316;
+    color: #ea580c;
     font-weight: 700;
 }
 
@@ -126,7 +126,7 @@
 }
 
 .experience-section.light .timeline-location {
-    color: #475569;
+    color: #4b5563;
     font-weight: 500;
 }
 
@@ -139,7 +139,7 @@
 }
 
 .experience-section.light .timeline-description {
-    color: #334155;
+    color: #374151;
     font-weight: 400;
 }
 
@@ -160,8 +160,9 @@
 }
 
 .experience-section.light .reference-btn {
-    background-color: #e8e8e8;
-    color: #1a1a1a;
+    background-color: #f3f4f6;
+    color: #374151;
+    border: 1px solid #e5e7eb;
 }
 
 .reference-btn:hover {
@@ -170,7 +171,9 @@
 }
 
 .experience-section.light .reference-btn:hover {
-    background-color: #d0d0d0;
+    background-color: #6366f1;
+    color: #ffffff;
+    border-color: #6366f1;
 }
 
 @media (max-width: 768px) {

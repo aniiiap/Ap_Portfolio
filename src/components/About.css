@@ -39,8 +39,8 @@
 }
 
 .about-container.light {
-    background-color: #fafafa;
-    color: #0a0a0a;
+    background-color: #ffffff;
+    color: #1f2937;
 }
 
 .about-title {
@@ -53,8 +53,8 @@
 }
 
 .about-container.light .about-title {
-    color: #e55a42;
-    font-weight: 500;
+    color: #7c3aed;
+    font-weight: 600;
 }
 
 .about-content {
@@ -82,9 +82,9 @@
 }
 
 .code-window.light {
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    border: 1px solid #e0e0e0;
+    border: 1px solid #e5e7eb;
 }
 
 .window-controls {
@@ -119,7 +119,7 @@
 }
 
 .code-window.light .code-text {
-    color: #0ea5e9;
+    color: #6366f1;
     font-weight: 500;
 }
 

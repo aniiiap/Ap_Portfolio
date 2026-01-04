@@ -14,8 +14,8 @@
 }
 
 .contact-container.light {
-    background-color: #fafafa;
-    color: #0a0a0a;
+    background-color: #ffffff;
+    color: #1f2937;
 }
 
 .contact-content {
@@ -57,16 +57,16 @@
 }
 
 .contact-container.light .contact-role .code-text {
-    color: #0ea5e9;
+    color: #6366f1;
     font-weight: 600;
 }
 
 .contact-container.light .contact-role .code-brace {
-    color: #666;
+    color: #6b7280;
 }
 
 .contact-container.light .contact-role .code-parentheses {
-    color: #ce9178;
+    color: #8b5cf6;
 }
 
 .contact-action {

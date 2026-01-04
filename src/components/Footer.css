@@ -13,9 +13,9 @@
 }
 
 .footer.light {
-    background-color: #fafafa;
-    color: #0a0a0a;
-    border-top-color: rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    color: #1f2937;
+    border-top-color: rgba(0, 0, 0, 0.1);
 }
 
 .footer-content {
@@ -41,7 +41,7 @@
 }
 
 .footer.light .footer-quote {
-    color: #333;
+    color: #4b5563;
     font-weight: 500;
 }
 
@@ -67,7 +67,7 @@
 }
 
 .footer.light .footer-contact-link {
-    color: #0ea5e9;
+    color: #6366f1;
     font-weight: 600;
 }
 
@@ -75,6 +75,11 @@
     color: #62ba39;
     background-color: rgba(98, 186, 57, 0.1);
     transform: translateY(-3px);
+}
+
+.footer.light .footer-contact-link:hover {
+    color: #4f46e5;
+    background-color: rgba(99, 102, 241, 0.1);
 }
 
 .footer-icon {

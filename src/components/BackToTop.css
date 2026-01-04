@@ -3,8 +3,8 @@
     bottom: 25px;
     right: 25px;
     padding: 8px 14px;
-    background-color: rgba(124, 58, 237, 0.15);
-    border: 1px solid rgba(124, 58, 237, 0.3);
+    background-color: rgba(99, 102, 241, 0.15);
+    border: 1px solid rgba(99, 102, 241, 0.3);
     border-radius: 20px;
     cursor: pointer;
     display: flex;
@@ -12,15 +12,15 @@
     gap: 6px;
     z-index: 1000;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.2);
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.2);
     animation: fadeInUp 0.3s ease-out;
     font-family: 'Fira Code', monospace;
 }
 
 .back-to-top.light {
-    background-color: rgba(124, 58, 237, 0.1);
-    border-color: rgba(124, 58, 237, 0.25);
-    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.15);
+    background-color: rgba(99, 102, 241, 0.1);
+    border-color: rgba(99, 102, 241, 0.25);
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.15);
 }
 
 @keyframes fadeInUp {
@@ -36,19 +36,19 @@
 
 .back-to-top:hover {
     transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
-    background-color: #7c3aed;
-    border-color: #7c3aed;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+    background-color: #6366f1;
+    border-color: #6366f1;
 }
 
 .back-to-top.light:hover {
-    background-color: #7c3aed;
-    border-color: #7c3aed;
+    background-color: #6366f1;
+    border-color: #6366f1;
 }
 
 .back-to-top-icon {
     font-size: 1rem;
-    color: #7c3aed;
+    color: #6366f1;
     font-weight: 600;
     line-height: 1;
     transition: color 0.3s ease;
@@ -60,7 +60,7 @@
 
 .back-to-top-text {
     font-size: 0.75rem;
-    color: #7c3aed;
+    color: #6366f1;
     font-weight: 500;
     line-height: 1;
     transition: color 0.3s ease;

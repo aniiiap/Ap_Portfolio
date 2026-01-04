@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import './Portfolio.css';
 import '../styles/animations.css';
 import { useTheme } from '../context/ThemeContext';
@@ -13,6 +13,15 @@ function Portfolio() {
     const { selectedSkill } = useFilter();
     const [codeRef, codeVisible] = useScrollAnimation();
     const [projectsRef, projectsVisible] = useScrollAnimation();
+    
+    // Terminal animation states
+    const [showPrompt, setShowPrompt] = useState(false);
+    const [commandText, setCommandText] = useState('');
+    const [showCode, setShowCode] = useState(false);
+    const [codeLines, setCodeLines] = useState([]);
+    const [showExecuting, setShowExecuting] = useState(false);
+    const [showOutput, setShowOutput] = useState(false);
+    const [animationComplete, setAnimationComplete] = useState(false);
 
     const allProjects = [
         {
@@ -78,33 +87,201 @@ function Portfolio() {
         );
     }, [selectedSkill, allProjects]);
 
+    // Terminal animation effect
+    useEffect(() => {
+        if (!codeVisible) {
+            // Reset when not visible
+            setShowPrompt(false);
+            setCommandText('');
+            setShowCode(false);
+            setCodeLines([]);
+            setShowExecuting(false);
+            setShowOutput(false);
+            setAnimationComplete(false);
+            return;
+        }
+
+        const command = 'showcaseProjects()';
+        const codeStructure = [
+            { type: 'keyword', text: 'function' },
+            { type: 'space', text: ' ' },
+            { type: 'function', text: 'showcaseProjects' },
+            { type: 'punctuation', text: ' ()' },
+            { type: 'punctuation', text: ' {' },
+        ];
+        const codeStructure2 = [
+            { type: 'indent', text: '  ' },
+            { type: 'keyword', text: 'return' },
+            { type: 'space', text: ' ' },
+            { type: 'variable', text: 'projects' },
+        ];
+        const codeStructure3 = [
+            { type: 'punctuation', text: '}' },
+        ];
+
+        // Start animation sequence
+        const timer1 = setTimeout(() => {
+            setShowPrompt(true);
+        }, 300);
+
+        // Type command
+        let commandIndex = 0;
+        const commandTimer = setInterval(() => {
+            if (commandIndex < command.length) {
+                setCommandText(command.slice(0, commandIndex + 1));
+                commandIndex++;
+            } else {
+                clearInterval(commandTimer);
+                // Show executing state
+                setTimeout(() => {
+                    setShowExecuting(true);
+                }, 500);
+                // Show code after a delay
+                setTimeout(() => {
+                    setShowCode(true);
+                    setShowExecuting(false);
+                    
+                    // Type first line
+                    let line1Index = 0;
+                    const line1Timer = setInterval(() => {
+                        if (line1Index < codeStructure.length) {
+                            setCodeLines([codeStructure.slice(0, line1Index + 1)]);
+                            line1Index++;
+                        } else {
+                            clearInterval(line1Timer);
+                            
+                            // Type second line after delay
+                            setTimeout(() => {
+                                let line2Index = 0;
+                                const line2Timer = setInterval(() => {
+                                    if (line2Index < codeStructure2.length) {
+                                        setCodeLines([
+                                            codeStructure,
+                                            codeStructure2.slice(0, line2Index + 1)
+                                        ]);
+                                        line2Index++;
+                                    } else {
+                                        clearInterval(line2Timer);
+                                        
+                                        // Type third line after delay
+                                        setTimeout(() => {
+                                            setCodeLines([
+                                                codeStructure,
+                                                codeStructure2,
+                                                codeStructure3
+                                            ]);
+                                            
+                                            // Show output after code is complete
+                                            setTimeout(() => {
+                                                setShowOutput(true);
+                                                setAnimationComplete(true);
+                                            }, 600);
+                                        }, 200);
+                                    }
+                                }, 50);
+                            }, 300);
+                        }
+                    }, 50);
+                }, 1200);
+            }
+        }, 100);
+
+        return () => {
+            clearTimeout(timer1);
+            clearInterval(commandTimer);
+        };
+    }, [codeVisible]);
+
     return (
         <div id="portfolio" className={`portfolio-container ${isDarkMode ? 'dark' : 'light'}`}>
             <div 
                 ref={codeRef}
                 className={`portfolio-code-section fade-in-up ${codeVisible ? 'visible' : ''}`}
             >
-                <div className={`code-window code-window-hover ${isDarkMode ? 'dark' : 'light'}`}>
+                <div className={`code-window code-window-hover ${isDarkMode ? 'dark' : 'light'} ${(showExecuting || (showCode && !showOutput)) ? 'executing' : ''} ${animationComplete ? 'completed' : ''}`}>
                     <div className="window-controls">
                         <div className="circle red"></div>
                         <div className="circle yellow"></div>
                         <div className="circle green"></div>
                     </div>
                     <div className="code-text">
-                        <div className="code-line">
-                            <span className="code-keyword">function</span>{' '}
-                            <span className="code-function">showcaseProjects</span>
-                            <span className="code-punctuation"> ()</span>
-                            <span className="code-punctuation"> {'{'}</span>
-                        </div>
-                        <div className="code-line">
-                            <span className="code-indent">  </span>
-                            <span className="code-keyword">return</span>{' '}
-                            <span className="code-variable">projects</span>
-                        </div>
-                        <div className="code-line">
-                            <span className="code-punctuation">{'}'}</span>
-                        </div>
+                        {showPrompt && (
+                            <div className="terminal-prompt">
+                                <span className="prompt-symbol">$ </span>
+                                <span className="command-line">
+                                    {commandText}
+                                    {commandText.length < 19 && (
+                                        <span className="cursor-blink">|</span>
+                                    )}
+                                </span>
+                            </div>
+                        )}
+                        {showExecuting && (
+                            <div className="executing-indicator">
+                                <span className="executing-text">⏳ Executing...</span>
+                                <span className="executing-dots">
+                                    <span className="dot">.</span>
+                                    <span className="dot">.</span>
+                                    <span className="dot">.</span>
+                                </span>
+                            </div>
+                        )}
+                        {showCode && codeLines.length > 0 && (
+                            <div className="code-output">
+                                {codeLines.map((line, lineIndex) => (
+                                    <div key={lineIndex} className="code-line">
+                                        {line.map((token, tokenIndex) => {
+                                            if (token.type === 'keyword') {
+                                                return <span key={tokenIndex} className="code-keyword">{token.text}</span>;
+                                            } else if (token.type === 'function') {
+                                                return <span key={tokenIndex} className="code-function">{token.text}</span>;
+                                            } else if (token.type === 'variable') {
+                                                return <span key={tokenIndex} className="code-variable">{token.text}</span>;
+                                            } else if (token.type === 'punctuation') {
+                                                return <span key={tokenIndex} className="code-punctuation">{token.text}</span>;
+                                            } else if (token.type === 'indent') {
+                                                return <span key={tokenIndex} className="code-indent">{token.text}</span>;
+                                            } else {
+                                                return <span key={tokenIndex}>{token.text}</span>;
+                                            }
+                                        })}
+                                        {lineIndex === codeLines.length - 1 && !showOutput && (
+                                            <span className="cursor-blink">|</span>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                        {showOutput && (
+                            <div className="execution-output">
+                                <div className="output-line">
+                                    <span className="output-symbol">▶</span>
+                                    <span className="output-text">Array({projects.length})</span>
+                                </div>
+                                <div className="output-success">
+                                    <span className="success-icon">✓</span>
+                                    <span className="success-text">Function executed successfully</span>
+                                </div>
+                            </div>
+                        )}
+                        {!showPrompt && !showCode && !showOutput && (
+                            <>
+                                <div className="code-line">
+                                    <span className="code-keyword">function</span>{' '}
+                                    <span className="code-function">showcaseProjects</span>
+                                    <span className="code-punctuation"> ()</span>
+                                    <span className="code-punctuation"> {'{'}</span>
+                                </div>
+                                <div className="code-line">
+                                    <span className="code-indent">  </span>
+                                    <span className="code-keyword">return</span>{' '}
+                                    <span className="code-variable">projects</span>
+                                </div>
+                                <div className="code-line">
+                                    <span className="code-punctuation">{'}'}</span>
+                                </div>
+                            </>
+                        )}
                     </div>
                 </div>
             </div>

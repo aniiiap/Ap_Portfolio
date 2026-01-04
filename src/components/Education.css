@@ -11,8 +11,8 @@
 }
 
 .education-section.light {
-    background-color: #fafafa;
-    color: #0a0a0a;
+    background-color: #ffffff;
+    color: #1f2937;
 }
 
 .section-header {
@@ -50,7 +50,7 @@
 
 
 .education-section.light .timeline::before {
-    background-color: #0ea5e9;
+    background-color: #6366f1;
 }
 
 .timeline-item {
@@ -75,8 +75,8 @@
 
 
 .education-section.light .timeline-item::before {
-    background-color: #0ea5e9;
-    border-color: #fafafa;
+    background-color: #6366f1;
+    border-color: #ffffff;
     border-width: 2px;
 }
 
@@ -105,7 +105,7 @@
 }
 
 .education-section.light .timeline-title {
-    color: #f97316;
+    color: #ea580c;
     font-weight: 700;
 }
 
@@ -117,7 +117,7 @@
 }
 
 .education-section.light .timeline-institute {
-    color: #475569;
+    color: #4b5563;
     font-weight: 500;
 }
 

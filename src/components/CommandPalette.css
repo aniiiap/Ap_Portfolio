@@ -35,8 +35,8 @@
 
 .command-palette.light {
     background-color: #ffffff;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-    border: 1px solid #e0e0e0;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e5e7eb;
 }
 
 @keyframes slideDown {
@@ -80,7 +80,7 @@
 }
 
 .command-palette.light .command-palette-input {
-    color: #0a0a0a;
+    color: #1f2937;
 }
 
 .command-palette-input::placeholder {
@@ -113,7 +113,7 @@
 
 .command-palette.light .command-palette-item:hover,
 .command-palette.light .command-palette-item.selected {
-    background-color: rgba(14, 165, 233, 0.1);
+    background-color: rgba(99, 102, 241, 0.1);
 }
 
 .command-icon {
@@ -130,7 +130,7 @@
 }
 
 .command-palette.light .command-label {
-    color: #0a0a0a;
+    color: #1f2937;
 }
 
 .command-shortcut {

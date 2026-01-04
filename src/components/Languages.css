@@ -10,8 +10,8 @@
 }
 
 .languages-section.light {
-    background-color: #fafafa;
-    color: #0a0a0a;
+    background-color: #ffffff;
+    color: #1f2937;
 }
 
 .section-header {
@@ -54,7 +54,7 @@
 }
 
 .languages-section.light .language-name {
-    color: #0a0a0a;
+    color: #1f2937;
     font-weight: 700;
 }
 
@@ -66,7 +66,7 @@
 
 .languages-section.light .language-proficiency {
     color: #6366f1;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .progress-bar {
@@ -92,7 +92,7 @@
 }
 
 .languages-section.light .progress-fill {
-    background-color: #0ea5e9;
+    background-color: #6366f1;
 }
 
 @media (max-width: 1024px) {

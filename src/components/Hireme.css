@@ -11,8 +11,8 @@
 }
 
 .hireme-container.light {
-    background-color: #fafafa;
-    color: #1a1a1a;
+    background-color: #ffffff;
+    color: #1f2937;
 }
 
 .hireme-content-wrapper {
@@ -57,7 +57,7 @@
 }
 
 .hireme-container.light .outer-circle {
-    border-color: #1a1a1a;
+    border-color: #6366f1;
 }
 
 .inner-circle {
@@ -74,7 +74,7 @@
 }
 
 .hireme-container.light .inner-circle {
-    border-color: #1a1a1a;
+    border-color: #6366f1;
 }
 
 .hire-me-svg {
@@ -97,7 +97,7 @@
 
 .hireme-container.light .hire-text-top,
 .hireme-container.light .hire-text-bottom {
-    fill: #1a1a1a;
+    fill: #6366f1;
 }
 
 .arrow-diagonal {
@@ -112,7 +112,7 @@
 }
 
 .hireme-container.light .arrow-diagonal {
-    color: #1a1a1a;
+    color: #6366f1;
 }
 
 /* Experiences Sidebar */
@@ -157,7 +157,7 @@
 }
 
 .hireme-container.light .hireme-title {
-    color: #1a1a1a;
+    color: #1f2937;
 }
 
 .hireme-intro {
@@ -172,7 +172,7 @@
 }
 
 .hireme-container.light .hireme-intro p {
-    color: #1a1a1a;
+    color: #374151;
 }
 
 .learn-more-btn {
@@ -188,8 +188,8 @@
 }
 
 .hireme-container.light .learn-more-btn {
-    color: #1a1a1a;
-    border-color: #1a1a1a;
+    color: #6366f1;
+    border-color: #6366f1;
 }
 
 .learn-more-btn:hover {
@@ -197,7 +197,8 @@
 }
 
 .hireme-container.light .learn-more-btn:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: #6366f1;
+    color: #ffffff;
 }
 
 /* Accordion */
@@ -214,7 +215,7 @@
 }
 
 .hireme-container.light .accordion-item {
-    border-color: #d0d0d0;
+    border-color: #e5e7eb;
 }
 
 .accordion-header {
@@ -231,7 +232,7 @@
 }
 
 .hireme-container.light .accordion-header:hover {
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: rgba(99, 102, 241, 0.05);
 }
 
 .accordion-header h3 {
@@ -242,7 +243,7 @@
 }
 
 .hireme-container.light .accordion-header h3 {
-    color: #1a1a1a;
+    color: #1f2937;
 }
 
 .accordion-arrow {
@@ -252,7 +253,7 @@
 }
 
 .hireme-container.light .accordion-arrow {
-    color: #1a1a1a;
+    color: #6366f1;
 }
 
 .accordion-content {
@@ -267,7 +268,7 @@
 }
 
 .hireme-container.light .accordion-divider {
-    background-color: #d0d0d0;
+    background-color: #e5e7eb;
 }
 
 @keyframes slideDown {
@@ -295,7 +296,7 @@
 }
 
 .hireme-container.light .accordion-content li {
-    color: #666;
+    color: #4b5563;
 }
 
 @media (max-width: 1200px) {
