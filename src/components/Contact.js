@@ -19,10 +19,15 @@ function Contact() {
                 <h1 className="contact-role">
                     <span className="code-brace">{'{'}</span>{' '}
                     <span className="code-text">Software Developer</span>{' '}
-                    <span className="code-parentheses">(Mobile & App)</span>{' '}
+                    <span className="code-parentheses">(Web App)</span>{' '}
                     <span className="code-brace">{'}'}</span>
                 </h1>
-                <h2 className="contact-action">Then Contact Me</h2>
+                <a 
+                    href="mailto:anishapatni912@gmail.com" 
+                    className="contact-button"
+                >
+                    Contact Me
+                </a>
             </div>
         </div>
     );

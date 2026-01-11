@@ -33,13 +33,13 @@ function App() {
             <Header onBulbClick={toggleTheme} />
             <MainSection />
             <About />
-            <Skills />
+            <Education />
             <Experience />
+            <Skills />
             <Portfolio />
             <Contact />
             <Hireme />
-            <Education />
-            <Languages />
+            {/* <Languages /> */}
             <Footer />
         </div>
     );

@@ -73,6 +73,47 @@
     font-size: 2rem;
     font-weight: 500;
     margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+    min-width: 140px;
+    margin-top: 20px;
+}
+
+.contact-container.dark .contact-button {
+    background-color: #4fc3f7;
+    color: #1a1a1a;
+    box-shadow: 0 4px 14px rgba(79, 195, 247, 0.3);
+}
+
+.contact-container.light .contact-button {
+    background-color: #6366f1;
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(99, 102, 241, 0.3);
+}
+
+.contact-button:hover {
+    transform: translateY(-2px);
+}
+
+.contact-container.dark .contact-button:hover {
+    background-color: #29b6f6;
+    box-shadow: 0 6px 20px rgba(79, 195, 247, 0.4);
+}
+
+.contact-container.light .contact-button:hover {
+    background-color: #4f46e5;
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
 }
 
 @media (max-width: 1024px) {
@@ -108,6 +149,11 @@
     .contact-action {
         font-size: 1.5rem;
     }
+    
+    .contact-button {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -131,6 +177,12 @@
     
     .contact-action {
         font-size: 1.2rem;
+    }
+    
+    .contact-button {
+        padding: 12px 25px;
+        font-size: 16px;
+        min-width: 120px;
     }
 }
 

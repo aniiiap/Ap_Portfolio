@@ -7,6 +7,7 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import projectImage1 from '../projects/ccdb911aae3789ac3d3d32b5f26d50a2ba43d893.png';
 import projectImage2 from '../projects/image.png';
 import projectImage3 from '../projects/Screenshot 2025-12-17 224450.png';
+import projectImage4 from '../projects/Screenshot 2026-01-11 163034.png';
 
 function Portfolio() {
     const { isDarkMode } = useTheme();
@@ -50,6 +51,15 @@ function Portfolio() {
             liveDemo: "https://www.makv.in/",
             codeLink: "https://github.com/aniiiap/Makv_web",
             image: projectImage3
+        },
+        {
+            id: 4,
+            title: "Hetave Enterprises",
+            description: " Developed a full-stack e-commerce platform for safety equipment with category-based product browsing and filtering.",
+            technologies: ["React", "Node.js", "MongoDB", "Express.js", "Tailwind CSS"],
+            liveDemo: "https://www.hetave.co.in/",
+            codeLink: "https://github.com/aniiiap/Hetave_web",
+            image: projectImage4
         }
     ];
 

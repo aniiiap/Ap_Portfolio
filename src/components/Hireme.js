@@ -45,7 +45,6 @@ const Hireme = () => {
                     
                     <div className="hireme-intro">
                         <p>Welcome to my portfolio I'm Anisha Patni, a passionate Web Developer dedicated to crafting impact experiences and solutions.</p>
-                        <button className="learn-more-btn">Learn More</button>
                     </div>
 
                     <div className="experience-accordion">
