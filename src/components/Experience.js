@@ -22,7 +22,7 @@ const Experience = () => {
           </div>
       <div className="timeline">
         <div className="timeline-item">
-          <span className="timeline-date">Sep. 2024 - Present</span>
+          <span className="timeline-date">Sep. 2025 - Present</span>
           <div className="timeline-content">
             <h3 className="timeline-title">Full Stack Developer - Docfyle Advisory</h3>
             <p className="timeline-location">Bhilwara</p>
