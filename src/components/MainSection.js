@@ -64,14 +64,14 @@ function MainSection() {
                     {showCursor && <span className="cursor">|</span>}
                 </h2>
                 <p className="tag-text">&lt;/h1&gt;</p>
-                <p className="code-comment">// Byte-ing into innovation, one line at a time</p>
-                <p className="code-comment">// Debugging the present, deploying the future</p>
-                <p className="code-comment">// you can check it out my github</p>
+                <p className="code-comment">{"// Byte-ing into innovation, one line at a time"}</p>
+                <p className="code-comment">{"// Debugging the present, deploying the future"}</p>
+                <p className="code-comment">{"// you can check it out my github"}</p>
                 <p className="github-link">
                     <span className="code-keyword">const</span> <span className="code-variable">githubLink</span> <span className="code-operator">=</span> <a className="git-link" href="https://github.com/aniiiap" target="_blank" rel="noopener noreferrer">"https://github.com/aniiiap"</a>
                 </p>
                 <div className="buttons">
-                    <button 
+                    <button
                         className="hire-me-btn"
                         onClick={() => {
                             const contactSection = document.getElementById('contact');
@@ -102,9 +102,9 @@ function MainSection() {
             </div>
 
             <div className="image-container">
-                <img 
-                    className={`profile-photo ${isDarkMode ? 'dark-theme-img' : 'light-theme-img'}`} 
-                    src={profile} 
+                <img
+                    className={`profile-photo ${isDarkMode ? 'dark-theme-img' : 'light-theme-img'}`}
+                    src={profile}
                     alt="Anisha Patni"
                 />
             </div>

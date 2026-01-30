@@ -9,7 +9,6 @@ import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Education from './components/Education';
-import Languages from './components/Languages';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Hireme from './components/Hireme';
