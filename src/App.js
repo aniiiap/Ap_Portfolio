@@ -39,7 +39,6 @@ function App() {
             <Portfolio />
             <Contact />
             <Hireme />
-            {/* <Languages /> */}
             <Footer />
         </div>
     );
